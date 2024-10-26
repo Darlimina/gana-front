@@ -95,7 +95,7 @@ function Login(){
 
                                             <div data-mdb-input-init class="form-outline mb-4">
                                             <label class="form-label" for="form3Example4">Contraseña</label>
-                                            <input type="password" id="form3Example4" class="form-control" placeholder='***********' value={password} onChange={(e) => setPassword(e.target.value)} required/>
+                                            <input type="password" id="form3Example4" class="form-control" placeholder='ingresa la contraseña' value={password} onChange={(e) => setPassword(e.target.value)} required/>
                                             
                                             </div>
                                             </div>

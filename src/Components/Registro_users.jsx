@@ -50,7 +50,7 @@ function RegistroUser(){
                     <div class="row d-flex justify-content-center">
                         <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
                             <h3>Regitro de usuarios</h3>
-                            <p class="blue-text">por favor ingresa todos los datos solicitados.</p>
+                            <p class="blue-text">Por favor ingresa todos los datos solicitados.</p>
                             <div class="card">
                                 <h5 class="text-center mb-4">Formulario de registro</h5>
                                 <form class="form-card" onSubmit={handleClickSubmit}>
@@ -86,7 +86,7 @@ function RegistroUser(){
                                     <div class="row justify-content-between text-left">
                                         <div class="form-group col-sm-6 flex-column d-flex">
                                             <label class="form-control-label px-3" htmlFor="pass">Contraseña<span class="text-danger" > *</span></label> 
-                                            <input type="password" id="pass"  name="pass" placeholder="***********"  onChange={(e) => setPassword(e.target.value)} required /> </div>
+                                            <input type="password" id="pass"  name="pass" placeholder="*********"  onChange={(e) => setPassword(e.target.value)} required /> </div>
 
                                         <div class="form-group col-sm-6 pt-4"> <button type="submit" class="btn btn-primary">Registrarse</button> 
                                         </div>
