@@ -21,7 +21,7 @@ function InfoUser(){
         
         const handleLogout = () => {
             localStorage.clear();
-            window.location = 'https://gana-loco-ander.vercel.app'
+            window.location = 'https://gana-front.vercel.app'
         };
 
         //---------------------------- Obtengo la información de la tabla y del usuario ------------------------- Terminao 
@@ -100,16 +100,17 @@ function InfoUser(){
         return (
             <>
             <header>
-                <nav id="main-navbar" class="navbar navbar-expand-lg navbar-light bg-white fixed-top border">
-                    <div class="container-fluid">
+
+                <nav id="main-navbar" class="navbar barra navbar-expand-lg navbar-light fixed-top border">
+                    <div class="container-fluid ">
 
                         <a class="navbar-brand col-sm-1" href="#"> </a>
-                        {DatosUser.map((datauser) => ( <span className='m-2'> Bievenido: <h5 class="mb-0 text-center"> {datauser.user}  </h5> </span> )) } 
                         
                         <ul class="navbar-nav ms-auto d-flex flex-row">
 
                             <div className='pt-2 d-none d-md-flex input-group w-auto my-auto'>
-                                {AuditLogin.map((auditlogin) => ( <span className='m-2'> <strong>Ultimo acceso: </strong> {auditlogin.fecha}</span> )) } 
+                                {DatosUser.map((datauser) => ( <span className='m-2'> Bievenido: <h5 class="mb-0 text-center"> {datauser.user}  </h5> </span> )) } 
+                        
                             </div>
 
                             <li class="nav-item">
@@ -125,8 +126,7 @@ function InfoUser(){
 
                             <li class="nav-item ">
                                 <button className='btn btn-primary' onClick={handleLogout}> 
-                                    <img src="https://img.icons8.com/?size=100&id=42471&format=png&color=000000" class="rounded-circle" height="22"
-                                        alt="" loading="lazy" />  <span>Exit</span>
+                                    <span>Salir</span>
                                 </button>
                             </li>
 
@@ -139,6 +139,7 @@ function InfoUser(){
                         </ul>
                     </div>
                 </nav>
+
             </header>
             
                 <main>
@@ -147,9 +148,9 @@ function InfoUser(){
                     <br />
                     </div>
                         <section class="mb-4">
-                            <div class="card mt-5">
+                            <div class="card mt-6">
 
-                            <div class="container-fluid px-1 py-5 mx-auto">
+                            <div class="container-fluid px-1 pb-2 mx-auto">
                                 <div class="row d-flex justify-content-center">
                                         
                                         <div class="form-card">
@@ -161,22 +162,26 @@ function InfoUser(){
                                                     <div class="form-group col-sm-8 flex-column d-flex"> 
                                                         <label class="form-control-label px-3" htmlFor='codigo'>Código<span class="text-danger"> *</span></label> 
                                                         <input type="number" id="codigo" name="codigo" placeholder="*****" onChange={(e) => setCodigo(e.target.value)} required autoFocus/> </div>
-                                                    <dir class="col-sm-2"></dir>
+                                                    <dir class="col-sm-2">
+
+                                                        <div class="row justify-content-between text-left mt-3">
+                                                            <dir class="col-sm-2"></dir>
+                                                            <div class="form-group col-sm-8"> <button type="submit" class="btn btn-outline-info">Registrar</button> </div>
+                                                        <dir class="col-sm-2"></dir>
+                                                    </div>
+
+                                                    </dir>
                                                 </div>
 
-                                                <div class="row justify-content-between text-left mt-3">
-                                                    <dir class="col-sm-2"></dir>
-                                                    <div class="form-group col-sm-8"> <button type="submit" class="btn btn-primary">Registrar</button> </div>
-                                                    <dir class="col-sm-2"></dir>
-                                                </div>
+                                                
                                             </form>
                                         </div>
                                 </div>
                             </div>
 
 
-                                <div class="card-header text-center py-3">
-                                    <h5 class="mb-0 text-center">
+                                <div class="card-header text-center  ">
+                                    <h5 class="mb-0 text-center colortabla py-3">
                                         <strong>Lista de códigos registrados</strong>
                                     </h5>
                                 </div>
@@ -218,7 +223,7 @@ function InfoUser(){
 
     }else{
         //Se redirecciona al login si no existe una varia de usuario valida 
-        window.location= 'https://gana-loco-ander.vercel.app'
+        window.location= 'https://gana-front.vercel.app'
     }
 }
 

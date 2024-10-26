@@ -3,8 +3,15 @@
   backdrop-filter: blur(30px);
 }
 .p-5{
-  background-image: url('https://mdbootstrap.com/img/new/textures/full/171.jpg');
-  height: 200px;
+  background-image: url('https://img.freepik.com/free-vector/blue-curve-frame-template_53876-114605.jpg');
+  height: 100px;
+}
+
+.barra{
+  background-color: #fcd5ee ;
+}
+.colortabla{
+  background-color: #fcd5ee ;
 }
 
 .modal {

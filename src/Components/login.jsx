@@ -17,7 +17,7 @@ function Login(){
         console.log('Form submitted:', { correo, password });
     
         try {
-          //const response = await fetch('https://pocketuxback.vercel.app/apiv1/login', {
+          
           const response = await fetch('https://gana-back.vercel.app/apiv1/login', {
             method: 'POST',
             headers: {
@@ -49,7 +49,7 @@ function Login(){
           } else {
             //setError('Usuario o clave incorrecto');
             //if (error === null) { console.log(error) }else {console.log(error)}
-            window.alert("Usuario o clave incorrecto");
+            window.alert("Usuario o contraseña incorrecta");
 
           }
         } catch (error) {
@@ -62,73 +62,68 @@ function Login(){
 
     const nuevousuario = () => {
         Navigate("/NewUser")
-        //window.location = 'https://gana-loco-ander.vercel.app'
+        //window.location = 'https://gana-front.vercel.app'
     };
 
     return (
     <>
         <section class="text-center">
-        <div class="p-5 bg-image" ></div>
+        <div class="p-5 bg-image" >
+        <h5 className='fw-bold'>Bienvenidos a la Promoción Gana Loco</h5>
+        </div>
         
-        <div class="card mx-4 mx-md-5 shadow-5-strong bg-body-tertiary" >
-            <div class="card-body py-4 px-md-5">
 
-                    <div class="row d-flex justify-content-center">
+        
+                    <div class="card  mx-md-5 shadow-5-strong bg-body-tertiary" >
+                        <div class="card-body py-4 px-md-5">
 
-                        <div className="col-lg-5">
-                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="img-fluid" alt="Sample image" />
+                                <div class="row d-flex justify-content-center">
+
+                                    <div className="col-lg-2"> </div>
+                                    
+                                    <div class="col-lg-6">
+                                    <h2 class="fw-bold mb-5">Iniciar Sesión</h2>
+                                    <form onSubmit={handleSubmitLogin}>
+
+                                        <div class="d-flex justify-content-center">
+                                        
+                                            <div className="row"> 
+                                            <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" htmlFor="email">Usuario</label>
+                                            <input type="email" placeholder='example@ezample.com' id="email" class="form-control" value={correo} onChange={(e) => setCorreo(e.target.value)} required/>
+                                            </div>
+
+                                            <div data-mdb-input-init class="form-outline mb-4">
+                                            <label class="form-label" for="form3Example4">Contraseña</label>
+                                            <input type="password" id="form3Example4" class="form-control" placeholder='***********' value={password} onChange={(e) => setPassword(e.target.value)} required/>
+                                            
+                                            </div>
+                                            </div>
+
+                                        </div>
+
+                                        <button type="submit" class="btn btn-primary btn-block mb-4"  >
+                                        Ingresar
+                                        </button>
+
+                                        <div class="text-center">
+                                            <p class="mb-5 pb-lg-2" >Aún no tienes una cuenta? <a href="#" onClick={nuevousuario}> ;Registrate aqui</a></p>
+                                        </div>
+                                    </form>
+
+                                    </div>
+
+                                    <div className="col-lg-2"> </div>
+
+                                </div>
+
                         </div>
-                        <div class="col-lg-7">
-                        <h2 class="fw-bold mb-5">Iniciar Sesión</h2>
-                        <form onSubmit={handleSubmitLogin}>
-
-                            <div class="d-flex justify-content-center">
-                            
-                                <div className="row"> 
-                                <div data-mdb-input-init class="form-outline mb-4">
-                                <label class="form-label" htmlFor="email">Usuario</label>
-                                <input type="email" placeholder='example@ezample.com' id="email" class="form-control" value={correo} onChange={(e) => setCorreo(e.target.value)} required/>
-                                </div>
-
-                                <div data-mdb-input-init class="form-outline mb-4">
-                                <label class="form-label" for="form3Example4">Clave</label>
-                                <input type="password" id="form3Example4" class="form-control" placeholder='***********' value={password} onChange={(e) => setPassword(e.target.value)} required/>
-                                
-                                </div>
-                                </div>
-
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-block mb-4"  >
-                            Ingresar
-                            </button>
-
-                            <div class="text-center">
-                                <p class="mb-5 pb-lg-2" >Aún no tienes una cuenta? <a href="#" onClick={nuevousuario}> ;Registrate aqui</a></p>
-                            </div>
-                        </form>
-
-                        </div>
-
                     </div>
 
-            </div>
-        </div>
 
-        <div class="p-5 bg-image" ></div>
         </section>
 
-        { /*
-        <div className='form-container'>
-            <Modal isOpen={!!error} onRequestClose={closeModal} contentLabel="Error Modal" className="modal" overlayClassName="overlay" >
-                <div className="modal-content">
-                <h2>Error</h2>
-                <p> error </p>
-                <button onClick={closeModal} className="submit-button">Cerrar</button>
-                </div>
-            </Modal>
-        </div>
-        */}
+        
     </>
 
     );
