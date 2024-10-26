@@ -166,7 +166,7 @@ function InfoUser(){
 
                                                         <div class="row justify-content-between text-left mt-3">
                                                             <dir class="col-sm-2"></dir>
-                                                            <div class="form-group col-sm-8"> <button type="submit" class="btn btn-outline-info">Registrar</button> </div>
+                                                            <div class="form-group col-sm-8"> <button type="submit" class="btn btn-outline-info">Registro</button> </div>
                                                         <dir class="col-sm-2"></dir>
                                                     </div>
 
