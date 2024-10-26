@@ -49,7 +49,7 @@ function RegistroUser(){
                 <div class="container-fluid px-1 py-5 mx-auto">
                     <div class="row d-flex justify-content-center">
                         <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
-                            <h3>Regitro de usuarios</h3>
+                            <h3>Registro de Usuarios</h3>
                             <p class="blue-text">Por favor ingresa todos los datos solicitados.</p>
                             <div class="card">
                                 <h5 class="text-center mb-4">Formulario de registro</h5>

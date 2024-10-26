@@ -102,7 +102,7 @@ function Login(){
 
                                         </div>
 
-                                        <button type="submit" class="btn btn-primary btn-block mb-4"  >
+                                        <button type="submit" class="btn btn-primary btn-block mb-2"  >
                                         Ingresar
                                         </button>
 
