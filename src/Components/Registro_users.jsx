@@ -35,7 +35,7 @@ function RegistroUser(){
             
         } catch (error) {
             console.error('Error:', error);
-            setError('Internal server error');
+            setError('Internal server error ');
         }
     }
 
