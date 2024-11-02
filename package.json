@@ -1,5 +1,5 @@
 {
-  "name": "parcial2-front",
+  "name": "gana-front",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^1.7.7",
     "bootstrap": "^5.3.3",
-    "parcial2-front": "file:",
+    "gana-front": "file:",
     "react": "^18.3.1",
     "react-bootstrap": "^2.10.5",
     "react-dom": "^18.3.1",
